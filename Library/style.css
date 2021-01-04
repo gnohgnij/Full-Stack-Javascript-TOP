@@ -1,0 +1,76 @@
+/*COLORS
+SIZZLING RED - rgb(242, 84, 91)
+AMARANTH PURPLE - rgb(169, 63, 85)
+GUNMETAL - rgb(25, 50, 60)
+MINT CREAM - rgb(243, 247, 240)
+ROSE TAUPE - rgb(140, 94, 88)
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bree Serif', serif;
+    background-color: rgb(25, 50, 60);
+}
+
+h1, h2 {
+    text-align: center;
+    color:rgb(169, 63, 85);
+}
+
+#form-container {
+    display: none;
+    border: 3px solid rgb(169, 63, 85);
+    height: 80vh;
+    width: 35vw;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#form-container form label {
+    font-size: 1.2rem;
+    margin-left: 2.25vw;
+    color: rgb(169, 63, 85);
+}
+
+#form-container form input {
+    display: block;
+    width: 30vw;
+    height: 5vh;
+    margin: 2.5vh auto;
+    background-color:rgb(243, 247, 240);
+    color: rgb(25, 50, 60);
+    border: none;
+}
+
+#form-container form input:focus {
+    outline: none;
+}
+
+#form-container form button {
+    display: block;
+    margin: 0 auto;
+    height: 5vh;
+    width: 10vw;
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+    color: rgb(25, 50, 60);
+    background-color: rgb(242, 84, 91);
+    border: none;
+    transition: 0.4s;
+}
+
+#form-container form button:focus {
+    outline: none;
+}
+
+#form-container form button:hover {
+    background-color: rgb(243, 247, 240);
+}
+
+
+form {
+    margin: 0 auto;
+}
+
+
