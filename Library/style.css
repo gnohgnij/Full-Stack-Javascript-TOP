@@ -21,7 +21,7 @@ h1, h2 {
 #form-container {
     display: none;
     border: 3px solid rgb(169, 63, 85);
-    height: 80vh;
+    height: 75vh;
     width: 35vw;
     margin: 0 auto;
     padding: 10px;
@@ -47,9 +47,43 @@ h1, h2 {
     outline: none;
 }
 
-#form-container form button {
+#form-container form #cancel {
+    background-color: rgb(25, 50, 60);
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: rgb(242, 84, 91);
+    float: right;
+}
+
+#form-container form i {
+    transition: 0.4s;
+}
+
+#form-container form i:hover {
+    color: rgb(243, 247, 240);
+    cursor: pointer;
+}
+
+#radio-btns {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#form-container form #read,  #form-container form #not-read{
+    height: 3vh;
+    width: 1vw;
+    margin: 0 0 0 2.5vw;
+    padding: 0;
+}
+
+#form-container form #read-label,  #form-container form #not-read-label{
+    font-size: 1.2rem;
+}
+
+#form-container form #submit {
     display: block;
-    margin: 0 auto;
+    margin: 7vh auto 0 auto;
     height: 5vh;
     width: 10vw;
     font-size: 1.2rem;
@@ -64,8 +98,9 @@ h1, h2 {
     outline: none;
 }
 
-#form-container form button:hover {
+#form-container form #submit:hover {
     background-color: rgb(243, 247, 240);
+    cursor: pointer;
 }
 
 
@@ -73,4 +108,13 @@ form {
     margin: 0 auto;
 }
 
+#buttons {
+    margin: 3vh auto;
+    display: flex;
+    justify-content: center;
+}
 
+#all-books {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}

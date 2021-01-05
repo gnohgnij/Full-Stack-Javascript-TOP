@@ -6,30 +6,42 @@
         <link href="style.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     </head>
     <body>
         <h1>Library</h1>
+        <div id="all-books">
+
+        </div>
         <div id="form-container">
             <form>
+                <button id="cancel"><i class="fas fa-times fa-2x"></i></button>
                 <h2>Add New Book</h2>
 
                 <label for="title"><b>Title</b></label>
-                <input type="text" placeholder="Enter Title" name="title" required>
+                <input type="text" placeholder="Enter Title" name="title" id="title" required>
 
                 <label for="author"><b>Author</b></label>
-                <input type="text" placeholder="Enter Author" name="author" required>
+                <input type="text" placeholder="Enter Author" name="author" id="author" required>
 
                 <label for="pages"><b>Pages</b></label>
-                <input type="text" placeholder="Enter Pages" name="pages" required>
+                <input type="text" placeholder="Enter Pages" name="pages" id="pages" required>
 
-                <label for="read"><b>Read</b></label>
-                <input type="text" placeholder="True or False" name="read" required>
+                <div id="radio-btns">
+                    <input type="radio" name="have-read" value="True" id="read" required>
+                    <label for="read" id="read-label">Read</label>
 
-                <button type="submit">Submit</button>
+                    <input type="radio" name="have-read" value="False" id="not-read" required>
+                    <label for="not-read" id="not-read-label">Not Read</label>
+                </div>
+
+                <input type="button" id="submit" value="Submit">
             </form>
         </div>
-        <button type="button" id="add">Add New Book</button>
-        <button type="button" id="display">Display Books</button>
+        <div id="buttons">
+            <button type="button" id="new">New Book</button>
+            <button type="button" id="display">Display Books</button>
+        </div>
 
     </body>
     <script src="script.js">
