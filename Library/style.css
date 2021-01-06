@@ -1,36 +1,44 @@
 /*COLORS
-SIZZLING RED - rgb(242, 84, 91)
-AMARANTH PURPLE - rgb(169, 63, 85)
-GUNMETAL - rgb(25, 50, 60)
-MINT CREAM - rgb(243, 247, 240)
-ROSE TAUPE - rgb(140, 94, 88)
+Dark Purple - 160C28
+Orange Yellow Crayola - EFCB68
+Honeydew - E1EFE6
+Ash Gray - AEB7B3
+Rich Black FOGRA 29 - 000411
 */
 
 html, body {
     margin: 0;
     padding: 0;
     font-family: 'Bree Serif', serif;
-    background-color: rgb(25, 50, 60);
+    background-color: #EFCB68;
 }
 
 h1, h2 {
     text-align: center;
-    color:rgb(169, 63, 85);
+    color: #160C28;
 }
 
 #form-container {
+    display: flex;
+    justify-content: center;
+}
+
+#form-container form {
     display: none;
-    border: 3px solid rgb(169, 63, 85);
+    background-color: #E1EFE6;
+    box-shadow: 0 4px 8px 0;
+    border-radius: 5px;
     height: 75vh;
     width: 35vw;
-    margin: 0 auto;
+    margin: 3vh auto;
     padding: 10px;
+    position: relative;
 }
 
 #form-container form label {
     font-size: 1.2rem;
     margin-left: 2.25vw;
-    color: rgb(169, 63, 85);
+    color: #160C28;
 }
 
 #form-container form input {
@@ -38,8 +46,6 @@ h1, h2 {
     width: 30vw;
     height: 5vh;
     margin: 2.5vh auto;
-    background-color:rgb(243, 247, 240);
-    color: rgb(25, 50, 60);
     border: none;
 }
 
@@ -48,7 +54,7 @@ h1, h2 {
 }
 
 #form-container form #cancel {
-    background-color: rgb(25, 50, 60);
+    background-color: #E1EFE6;
     border: none;
     margin: 0;
     padding: 0;
@@ -61,7 +67,7 @@ h1, h2 {
 }
 
 #form-container form i:hover {
-    color: rgb(243, 247, 240);
+    color: #AEB7B3;
     cursor: pointer;
 }
 
@@ -88,8 +94,8 @@ h1, h2 {
     width: 10vw;
     font-size: 1.2rem;
     font-family: 'Bree Serif', serif;
-    color: rgb(25, 50, 60);
-    background-color: rgb(242, 84, 91);
+    color: #160C28;
+    background-color: #EFCB68;
     border: none;
     transition: 0.4s;
 }
@@ -99,7 +105,7 @@ h1, h2 {
 }
 
 #form-container form #submit:hover {
-    background-color: rgb(243, 247, 240);
+    background-color: #AEB7B3;
     cursor: pointer;
 }
 
@@ -109,12 +115,29 @@ form {
 }
 
 #buttons {
-    margin: 3vh auto;
     display: flex;
     justify-content: center;
 }
 
+#buttons #new {
+    background-color: #EFCB68;
+    border: none;
+    transition: 0.4s;
+}
+
+#buttons #new:focus {
+    outline: none;
+}
+
+#buttons #new:hover {
+    color: #AEB7B3;
+    cursor: pointer;
+}
+
 #all-books {
     display: grid;
+    padding: 20px;
     grid-template-columns: repeat(5, 1fr);
+    margin: 3vh auto;
+    column-gap: 50px;
 }

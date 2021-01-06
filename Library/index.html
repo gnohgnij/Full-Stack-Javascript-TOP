@@ -10,8 +10,10 @@
     </head>
     <body>
         <h1>Library</h1>
+        <div id="buttons">
+            <button type="button" id="new"><i class="far fa-plus-square fa-4x"></i></button>
+        </div>
         <div id="all-books">
-
         </div>
         <div id="form-container">
             <form>
@@ -28,19 +30,15 @@
                 <input type="text" placeholder="Enter Pages" name="pages" id="pages" required>
 
                 <div id="radio-btns">
-                    <input type="radio" name="have-read" value="True" id="read" required>
+                    <input type="radio" name="have-read" value="Read" id="read" required>
                     <label for="read" id="read-label">Read</label>
 
-                    <input type="radio" name="have-read" value="False" id="not-read" required>
+                    <input type="radio" name="have-read" value="Not Read" id="not-read" required>
                     <label for="not-read" id="not-read-label">Not Read</label>
                 </div>
 
                 <input type="button" id="submit" value="Submit">
             </form>
-        </div>
-        <div id="buttons">
-            <button type="button" id="new">New Book</button>
-            <button type="button" id="display">Display Books</button>
         </div>
 
     </body>
