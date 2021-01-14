@@ -15,19 +15,6 @@ const gameboard = (() => {
         square.setAttribute('id', i);
         grid.appendChild(square);
     }
-
-    const allSquares = document.querySelectorAll('.square');
-    allSquares.forEach(square => square.addEventListener('click', function(){
-        console.log(game.currentTurn);
-        const icon = document.createElement('img');
-        icon.setAttribute('class', 'pic');
-        icon.src = 'images/' + game.currentTurn.icon + '.png';
-        square.appendChild(icon);
-        // console.log(game.determineWinner());
-        game.nextPlayer();
-    }))
-
-
     return {board};
 })();
 
@@ -36,6 +23,8 @@ const game = (() => {
     const playerTwo = player("Player Two", "superman");
 
     let winner = undefined;
+    let winnerDeclared = false;
+    let emptySpaces = 9;
 
     let currentTurn = playerOne;
 
@@ -61,20 +50,24 @@ const game = (() => {
     ];
 
     const determineWinner = () => {
-        let winnerDeclared = false;
 
         let playerOneIndexes = [];
         let playerTwoIndexes = [];
+
         for(let i=0; i<9; i++){
             if(gameboard.board[i] == "batman"){
                 playerOneIndexes.push(i)
             }
-            else{
+            else if(gameboard.board[i] == "superman"){
                 playerTwoIndexes.push(i);
             }
         }
 
         for(let i=0; i<winningCombi.length; i++){
+
+            // console.log('PLAYER 1: ' + playerOneIndexes.toString());
+            // console.log('PLAYER 2: ' + playerTwoIndexes.toString());
+            // console.log('WINNING COMBI: ' + winningCombi[i].toString());
 
             if(winningCombi[i].toString() == playerOneIndexes.toString()){
                 winner = playerOne;
@@ -85,8 +78,38 @@ const game = (() => {
                 winnerDeclared = true;
             }
         }
-        return {winnerDeclared};
     }
+
+    const allSquares = document.querySelectorAll('.square');
+    allSquares.forEach(square => square.addEventListener('click', function(){
+        const icon = document.createElement('img');
+        icon.setAttribute('class', 'pic');
+        icon.src = 'images/' + currentTurn.icon + '.png';
+        square.appendChild(icon);
+        gameboard.board[Number(square.id)] = currentTurn.icon;
+        emptySpaces --;
+
+        determineWinner();
+
+        if(winnerDeclared === true){
+            let winnerDiv = document.querySelector('#result');
+            let winnerText = document.createElement('h1');
+            winnerText.setAttribute('id', 'result-text');
+            winnerText.textContent = winner.playerName + ' is the winner!';
+            winnerDiv.appendChild(winnerText);
+        }
+        else if(emptySpaces>0 && winnerDeclared == false){
+            game.nextPlayer();
+        }
+        else if(emptySpaces == 0 && winnerDeclared == false){
+            let resultDiv = document.querySelector('#result');
+            let resultText = document.createElement('h1');
+            resultText.setAttribute('id', 'result-text');
+            resultText.textContent = 'Draw!';
+            resultDiv.appendChild(resultText);
+        }
+        
+    }))
 
     return {currentTurn, nextPlayer, winner, winningCombi, determineWinner};
 })();

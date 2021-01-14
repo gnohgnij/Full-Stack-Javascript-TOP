@@ -58,3 +58,9 @@ i {
 .pic {
     height: 120px;
 }
+
+#result-text {
+    font-family: 'Knewave', cursive;
+    color: #DA7422;
+    text-align: center;
+}
