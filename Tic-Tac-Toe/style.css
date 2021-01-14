@@ -1,0 +1,60 @@
+/* Colors
+Pine Tree - 30362F
+Antique Bronze- 625834
+Metallic Sunburst - 625834
+Light Yellow - FFFBDB
+Chocolate Web - DA7422 */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Knewave', cursive;
+    background-color: #FFFBDB;
+}
+
+header {
+    margin-top: 20px;
+    display: flex; 
+    justify-content: center;
+}
+
+header h1 {
+    text-align: center;
+    color: #DA7422;
+    font-size: 50px;
+    display: inline;
+}
+
+#gameboard {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    border: solid #DA7422 10px;
+    border-radius: 10px;
+}
+
+.square {
+    background-color: #FFFBDB;
+    border: solid #DA7422 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.square:hover {
+    background-color: #625834;
+    cursor: pointer;
+}
+
+i {
+    color: #DA7422;
+}
+
+.pic {
+    height: 120px;
+}
