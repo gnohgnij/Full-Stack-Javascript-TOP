@@ -18,7 +18,13 @@ const gameboard = (() => {
 
     const allSquares = document.querySelectorAll('.square');
     allSquares.forEach(square => square.addEventListener('click', function(){
-        console.log(game.determineWinner());
+        console.log(game.currentTurn);
+        const icon = document.createElement('img');
+        icon.setAttribute('class', 'pic');
+        icon.src = 'images/' + game.currentTurn.icon + '.png';
+        square.appendChild(icon);
+        // console.log(game.determineWinner());
+        game.nextPlayer();
     }))
 
 
@@ -41,10 +47,6 @@ const game = (() => {
         else{
             currentTurn = playerOne;
         }
-        allSquares.forEach(square => square.addEventListener('click', function(){
-            console.log(currentTurn);
-            console.log(game.determineWinner());
-        }))
     }
 
     const winningCombi = [
