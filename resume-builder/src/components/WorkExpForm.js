@@ -48,6 +48,7 @@ function WorkExpForm(props) {
           name="description"
           onChange={handleChange}
           value={work.description}
+          className="border-solid border-2 rounded"
         ></textarea>
       </div>
       <div className="grid grid-cols-2 py-2">
