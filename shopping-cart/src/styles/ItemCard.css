@@ -1,0 +1,15 @@
+.meta-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.meta-description--cart-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card--image {
+    display: flex;
+    justify-content: center;
+}
+
