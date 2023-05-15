@@ -1,6 +1,3 @@
 # Full-Stack-Javascript-TOP
 
-This repo will host the projects that are part of the Fullstack Javascript Curriculum by The Odin Project
-
-https://gnohgnij.github.io/Full-Stack-Javascript-TOP/index.html
-
+Project submissions for the [Full Stack JavaScript course](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript) by The Odin Project.
