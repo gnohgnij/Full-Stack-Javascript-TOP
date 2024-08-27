@@ -1,48 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Library</title>
-        <link href="style.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <h1>Library</h1>
-        <div id="buttons">
-            <button type="button" id="new"><i class="far fa-plus-square fa-4x"></i></button>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Library</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Library</h1>
+    <div id="buttons">
+      <button type="button" id="new">
+        <i class="far fa-plus-square fa-4x"></i>
+      </button>
+    </div>
+    <div id="all-books"></div>
+    <div id="form-container">
+      <form>
+        <button type="button" id="cancel">
+          <i class="fas fa-times fa-2x"></i>
+        </button>
+        <h2>Add New Book</h2>
+
+        <label for="title"><b>Title</b></label>
+        <label id="title-error-label" style="display: none"></label>
+        <input
+          type="text"
+          placeholder="Enter Title"
+          name="title"
+          id="title"
+          required
+        />
+
+        <label for="author"><b>Author</b></label>
+        <label id="author-error-label" style="display: none"></label>
+        <input
+          type="text"
+          placeholder="Enter Author"
+          name="author"
+          id="author"
+          required
+        />
+
+        <label for="pages"><b>Pages</b></label>
+        <label id="page-error-label" style="display: none"></label>
+        <input
+          type="text"
+          placeholder="Enter Pages"
+          name="pages"
+          id="pages"
+          required
+        />
+
+        <div id="radio-btns">
+          <input
+            type="radio"
+            name="have-read"
+            value="Read"
+            id="read"
+            required
+          />
+          <label for="read" id="read-label">Read</label>
+
+          <input
+            type="radio"
+            name="have-read"
+            value="Not Read"
+            id="not-read"
+            required
+          />
+          <label for="not-read" id="not-read-label">Not Read</label>
         </div>
-        <div id="all-books">
-        </div>
-        <div id="form-container">
-            <form>
-                <button id="cancel"><i class="fas fa-times fa-2x"></i></button>
-                <h2>Add New Book</h2>
+        <label id="radio-buttons-error-label" style="display: none"></label>
 
-                <label for="title"><b>Title</b></label>
-                <input type="text" placeholder="Enter Title" name="title" id="title" required>
-
-                <label for="author"><b>Author</b></label>
-                <input type="text" placeholder="Enter Author" name="author" id="author" required>
-
-                <label for="pages"><b>Pages</b></label>
-                <input type="text" placeholder="Enter Pages" name="pages" id="pages" required>
-
-                <div id="radio-btns">
-                    <input type="radio" name="have-read" value="Read" id="read" required>
-                    <label for="read" id="read-label">Read</label>
-
-                    <input type="radio" name="have-read" value="Not Read" id="not-read" required>
-                    <label for="not-read" id="not-read-label">Not Read</label>
-                </div>
-
-                <input type="button" id="submit" value="Submit">
-            </form>
-        </div>
-
-    </body>
-    <script src="script.js">
-
-    </script>
+        <input type="button" id="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
