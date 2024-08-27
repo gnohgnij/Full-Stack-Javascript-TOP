@@ -24,14 +24,14 @@ function addBookToLibrary() {
 
   if (title.length == 0) {
     const titleErrorLabel = document.getElementById("title-error-label");
-    titleErrorLabel.textContent = "Title must not be a empty!";
+    titleErrorLabel.textContent = "Title must not be empty!";
     titleErrorLabel.style.display = "block";
     titleErrorLabel.style.color = "red";
     hasError = true;
     return hasError;
   } else if (author.length == 0) {
     const authorErrorLabel = document.getElementById("author-error-label");
-    authorErrorLabel.textContent = "Author must not be a empty!";
+    authorErrorLabel.textContent = "Author must not be empty!";
     authorErrorLabel.style.display = "block";
     authorErrorLabel.style.color = "red";
     hasError = true;
