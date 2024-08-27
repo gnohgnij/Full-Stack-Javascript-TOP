@@ -83,6 +83,24 @@ const RouteSwitch = () => {
       (item) => item.name !== nameOfItemToDelete
     );
     setCartItems(newCartItems);
+
+    var newCartItemNames = [];
+    newCartItems.forEach((item) => {
+      newCartItemNames.push(item.name);
+    });
+    var allItemNames = [];
+    itemQuantity.forEach((item) => {
+      allItemNames.push(item.name);
+    });
+    allItemNames.forEach((name) => {
+      if (!newCartItemNames.includes(name)) {
+        newCartItems.push({
+          name: name,
+          qty: 0,
+        });
+      }
+    });
+    setItemQuantity(newCartItems);
   };
 
   return (
